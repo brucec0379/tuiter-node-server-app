@@ -9,12 +9,13 @@ import UserController
 import TuitsController
     from "./controllers/tuits/tuits-controller.js";
 const app = express();
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
- || 'mongodb://localhost:27017/tuiter
-mongoose.connect(CONNECTION_STRING);
 app.use(cors())
 app.use(express.json());
 TuitsController(app);
 HelloController(app);
 UserController(app);
 app.listen(process.env.PORT ||4000)
+
+const CONNECTION_STRING = 'mongodb+srv://Chenghai0379:LoveLzj1314.@cluster0.y0wpi29.mongodb.net/?retryWrites=true&w=majority
+    || 'mongodb://localhost:27017/tuiter'
+mongoose.connect(CONNECTION_STRING);
