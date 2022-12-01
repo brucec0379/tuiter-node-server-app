@@ -16,6 +16,6 @@ HelloController(app);
 UserController(app);
 app.listen(process.env.PORT ||4000)
 
-const CONNECTION_STRING = 'mongodb+srv://Chenghai0379:LoveLzj1314.@cluster0.y0wpi29.mongodb.net/?retryWrites=true&w=majority
+const CONNECTION_STRING = 'mongodb+srv://Chenghai0379:<LoveLzj1314.>@cluster0.y0wpi29.mongodb.net/?retryWrites=true&w=majority
     || 'mongodb://localhost:27017/tuiter'
 mongoose.connect(CONNECTION_STRING);
