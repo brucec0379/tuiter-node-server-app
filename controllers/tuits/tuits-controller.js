@@ -8,9 +8,15 @@ const createTuit = async (req, res) => {
                                  .createTuit(newTuit);
     res.json(insertedTuit);
 }
-const findTuits = async (req, res) =>
+
+const findTuits = async (req, res) =>{
+   try {
     const tuits = await tuitsDao.findTuits()
     res.json(tuits);
+    } catch (err) {
+        res.sendStatus(503);
+      }
+};
 
 const updateTuit = async (req, res) => {
     const tuitdIdToUpdate = req.params.tid;
